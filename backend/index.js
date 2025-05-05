@@ -205,6 +205,10 @@ app.post("/newOrder", async(req, res) => {
     res.send("Order saved!");
 });
 
+app.get("/", (req, res) => {
+    res.send("Server is running");
+});
+
 app.listen(PORT, () => {
     console.log("App Started");
     mongoose.connect(uri);
